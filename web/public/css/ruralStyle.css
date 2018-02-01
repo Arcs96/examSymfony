@@ -1,0 +1,39 @@
+
+/* body */
+body{background-color: #EDEDED;}
+
+/*.container {width: 1000px}*/
+.display-4{color: white}
+
+/*Acción btn tabs*/
+.nav-pills > li > a{
+  background-color:#fff ;
+  color:black;
+}
+.nav-pills > li > a:hover{
+  background: #579D4F; /*Fondo tab */
+  opacity: 0.8;
+  border: medium none;
+  border-radius: 0;
+  color:#fff;
+}
+.nav-pills .nav-link.active,
+.show>.nav-pills .nav-link{
+  background: #579D4F; /*Fondo tab*/
+  border-radius: 0px;
+}
+
+/*Contendor nav-tabs*/
+#pills-tab,.div-content{
+  height:50px;
+  background-color: white;
+  border: 0.5px
+  solid #D1D1D1;
+}
+
+/* Cards */
+.card-columns {
+  -webkit-column-count: 2;
+  -moz-column-count: 2;
+  column-count: 2;
+}

@@ -1,0 +1,11 @@
+<body>
+  {% for usuario in usuarios %}
+  <div style="padding:10px;">
+      <h4 class="card-title">{{ usuario.username }}</h4>
+      <!-- Redirección a funcion actualizar -->
+      <a href="{{ path('updateUsuario',{ 'id': usuario.id } )}}">actualizar</a>
+      <!-- Redirección a funcion eliminar -->
+      <a href="{{ path('deleteUsuario',{ 'id': usuario.id } )}}">borrar</a>
+  </div>
+  {% endfor %}
+</body>

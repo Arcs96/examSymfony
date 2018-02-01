@@ -1,0 +1,54 @@
+{% block body %}
+    <h1>Alojamiento</h1>
+
+    <table>
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ alojamiento.id }}</td>
+            </tr>
+            <tr>
+                <th>Nomalojamiento</th>
+                <td>{{ alojamiento.nomAlojamiento }}</td>
+            </tr>
+            <tr>
+                <th>Precioaprox</th>
+                <td>{{ alojamiento.precioAprox }}</td>
+            </tr>
+            <tr>
+                <th>Tipoalquiler</th>
+                <td>{{ alojamiento.tipoAlquiler }}</td>
+            </tr>
+            <tr>
+                <th>Descrip</th>
+                <td>{{ alojamiento.descrip }}</td>
+            </tr>
+            <tr>
+                <th>Numestancia</th>
+                <td>{{ alojamiento.numEstancia }}</td>
+            </tr>
+            <tr>
+                <th>Numpers</th>
+                <td>{{ alojamiento.numPers }}</td>
+            </tr>
+            <tr>
+                <th>Servicios</th>
+                <td>{{ alojamiento.servicios }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('alojamiento_index') }}">Back to the list</a>
+        </li>
+        <li>
+            <a href="{{ path('alojamiento_edit', { 'id': alojamiento.id }) }}">Edit</a>
+        </li>
+        <li>
+            {{ form_start(delete_form) }}
+                <input type="submit" value="Delete">
+            {{ form_end(delete_form) }}
+        </li>
+    </ul>
+{% endblock %}

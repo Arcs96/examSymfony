@@ -1,0 +1,26 @@
+crud:
+    resource: "@CRUDBundle/Controller/"
+    type:     annotation
+    prefix:   /crud
+
+admin:
+    resource: "@AdminBundle/Controller/"
+    type:     annotation
+    prefix:   /admin/
+
+principal:
+    resource: "@PrincipalBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
+rural:
+    resource: "@RuralBundle/Controller/"
+    type:     annotation
+    prefix:   /rural
+
+app:
+    resource: '@AppBundle/Controller/'
+    type: annotation
+
+logout:
+    path: /logout

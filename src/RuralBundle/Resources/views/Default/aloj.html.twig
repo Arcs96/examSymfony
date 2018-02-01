@@ -1,0 +1,8 @@
+{% block body %}
+  {% for alojamiento in alojamientos %}
+  <ul>
+    <li>{{ alojamiento.id }}</li>
+    <li>{{ alojamiento.nomAlojamiento }}</li>
+  </ul>
+  {% endfor %}
+{% endblock %}

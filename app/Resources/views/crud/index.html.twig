@@ -1,0 +1,49 @@
+{% block body %}
+    <h1>Alojamientos list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Nomalojamiento</th>
+                <th>Precioaprox</th>
+                <th>Tipoalquiler</th>
+                <th>Descrip</th>
+                <th>Numestancia</th>
+                <th>Numpers</th>
+                <th>Servicios</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for alojamiento in alojamientos %}
+            <tr>
+                <td><a href="{{ path('alojamiento_show', { 'id': alojamiento.id }) }}">{{ alojamiento.id }}</a></td>
+                <td>{{ alojamiento.nomAlojamiento }}</td>
+                <td>{{ alojamiento.precioAprox }}</td>
+                <td>{{ alojamiento.tipoAlquiler }}</td>
+                <td>{{ alojamiento.descrip }}</td>
+                <td>{{ alojamiento.numEstancia }}</td>
+                <td>{{ alojamiento.numPers }}</td>
+                <td>{{ alojamiento.servicios }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('alojamiento_show', { 'id': alojamiento.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('alojamiento_edit', { 'id': alojamiento.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('alojamiento_new') }}">Create a new alojamiento</a>
+        </li>
+    </ul>
+{% endblock %}
